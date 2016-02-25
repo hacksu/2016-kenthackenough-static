@@ -24,7 +24,7 @@ h2 {
 
 p {
 	font-size: 18pt;
-	color: #4D7ABD;
+	color: #5AC2AE;
 	line-height: 0.7;
 
 	opacity: 0;
@@ -68,7 +68,7 @@ footer {
 
 a {
 	text-decoration: none;
-	color: #4D7ABD;
+	color:inherit;
 }
 
 #logo {
@@ -118,6 +118,6 @@ a {
 
 
 .btn:hover {
-	color: #F7961D;
+	color: #5AC2AE ;
 	border-color: #D21C5A;
 }
