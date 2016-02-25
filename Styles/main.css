@@ -1,0 +1,123 @@
+/*
+Light Blue: #4D7ABD 
+Dark Blue: #2B3F66 
+Teal: #5AC2AE 
+Orange: #F7961D 
+Pink: #D21C5A 
+*/
+
+html {
+	background-color: #111;
+	text-align: center;
+	font-family: 'Abel', sans-serif;
+}
+
+h2 {
+	font-size: 28pt;
+	color: #F7961D;
+
+	opacity: 0;
+
+	-webkit-transition: opacity 3s; /* Safari */
+  	transition: opacity 3s;
+}
+
+p {
+	font-size: 18pt;
+	color: #4D7ABD;
+	line-height: 0.7;
+
+	opacity: 0;
+
+	-webkit-transition: opacity 3s; /* Safari */
+  	transition: opacity 3s;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+
+	-webkit-transition: opacity 3s; /* Safari */
+  	transition: opacity 3s;
+}
+
+#media {
+	margin-left: 20px;
+	float: left;
+}
+
+#powered {
+	float: right;
+}
+
+#powered h4 {
+	color: #2B3F66;
+	font-size: 12pt;
+	display: inline-block;
+	float: left;
+}
+
+#hacksu {
+	display: inline-block;
+	height: 60px; 
+	margin-right: 20px;
+}
+
+a {
+	text-decoration: none;
+	color: #4D7ABD;
+}
+
+#logo {
+	width: 50%;
+	margin: 10vh auto 7vh auto;
+	opacity: 0;
+
+	-webkit-transition: opacity 3s; /* Safari */
+  	transition: opacity 3s;
+}
+
+#waves {
+  	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
+	display: block;
+	width: 100%;
+	height: 20vh;
+	max-height: 200px;
+	margin: 0 auto;
+}
+
+#info {
+	position: relative;
+	top: 37vh;
+}
+
+.btn {
+	position: relative;
+	border: 3px solid #2B3F66;
+	color: #4D7ABD;
+	width: 150px;
+	display: block;
+	border-radius: 5px;
+  	padding: 15px 45px;
+  	margin: 50px auto 0 auto;
+  	font-size: 1.2rem;
+  	line-height: 1;
+  	text-transform: uppercase;
+  	text-align: center;
+  	cursor: hand;
+  	-webkit-transition: border-color 0.3s, color 0.3s, opacity 3s; /* Safari */
+  	transition: border-color 0.3s, color 0.3s, opacity 3s;;
+
+  	opacity: 0;
+}
+
+
+.btn:hover {
+	color: #F7961D;
+	border-color: #D21C5A;
+}
