@@ -72,7 +72,7 @@
 		function animate() {
 		    requestAnimationFrame( animate );
 		    dt = dt + 1;
-		    if (!drawWave('#4D7ABD', 8, 8, 0.5, true)) { //Check to see if the slowest wave (Blue) is done drawing
+		    if (!drawWave('#4D7ABD', 10, 8, 0.5, true)) { //Check to see if the slowest wave (Blue) is done drawing
 		    	$('#logo').css('opacity', '1'); //fade in logo
 		    	
 		    	setTimeout( function(){ //Fade in date
@@ -89,8 +89,8 @@
        			},1000);
 		    	
 		    } else {
-		    	drawWave('#D21C5A', 7, 2, 0, true)//Pink
-		    	drawWave('#F7961D', 9, 4, 0.25, true);//Orange
+		    	drawWave('#D21C5A', 9, 2, 0, true)//Pink
+		    	drawWave('#F7961D', 11, 4, 0.25, true);//Orange
 		    }
 		}
 
