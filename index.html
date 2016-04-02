@@ -14,7 +14,7 @@
 		<h2>October 2016</h2>
 		<p><a href="mailto:staff@khe.io">staff@khe.io</a></p>
 		<a href="Sponsorship.Packet.pdf"><div class="btn">Sponsor Info</div></a>
-		<input type="email" placeholder="Enter an email to keep updated" class="txt" id="newsletter-sign-up" spellcheck="false"/>
+		<input type="email" placeholder="MAILING LIST" class="txt" id="newsletter-sign-up" spellcheck="false"/>
 
 		<footer>
 		<div id="media">
@@ -53,7 +53,7 @@
 	<script type="text/javascript">
 
 		$(function () {
-			let newsletter = $("#newsletter-sign-up");
+			var newsletter = $("#newsletter-sign-up");
 			newsletter.keyup(function (e) {
 				if (e.keyCode == 13) {
 					$.post({
@@ -138,8 +138,6 @@
 			leftToRight [NOT READY YET]-  boolean. True will draw the line left to right. False: right to left
 		*/	
 		function drawWave(color, speed, height, offset, leftToRight) {
-			var speed = speed; 
-
 			//Whoa math!
 			var prevX = leftToRight ? ((dt - 1) * speed) : (canvas.width - (dt - 1) * speed);
 		    var prevY = Math.sin( (periods * 2) * (prevX / canvas.width) * Math.PI ) * (canvas.height-stroke)/height + canvas.height / 2;
