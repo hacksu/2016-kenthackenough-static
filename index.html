@@ -3,7 +3,7 @@
 	<title>Kent Hack Enough</title>
 	<link rel="stylesheet" type="text/css" href="Styles/normalize.css">
 	<link rel="stylesheet" type="text/css" href="Styles/main.css">
-	<meta name='viewport', content='width=device-width, initial-scale=1'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 </head>
@@ -14,7 +14,9 @@
 		<h2>October 2016</h2>
 		<p><a href="mailto:staff@khe.io">staff@khe.io</a></p>
 		<a href="Sponsorship.Packet.pdf"><div class="btn">Sponsor Info</div></a>
-	<footer>
+		<input type="email" placeholder="Enter an email to keep updated" class="txt" id="newsletter-sign-up" spellcheck="false"/>
+
+		<footer>
 		<div id="media">
 			
 		</div>
@@ -49,6 +51,38 @@
 		}
 	</script>
 	<script type="text/javascript">
+
+		$(function () {
+			let newsletter = $("#newsletter-sign-up");
+			newsletter.keyup(function (e) {
+				if (e.keyCode == 13) {
+					$.post({
+						url: "https://api.khe.io/v1.0/news",
+						data: JSON.stringify({email: newsletter.val()}),
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						success: function(data) {
+							newsletter.attr("placeholder", "See you soon");
+							newsletter.attr("disabled", true);
+							newsletter.css("background-color","#008000");
+							console.log("it worked")
+						},
+						error: function(data) {
+							newsletter.attr("placeholder", "Try that again?");
+							newsletter.css("background-color","#990000");
+							console.log("it failed");
+							newsletter.keyup(function (e) {
+								newsletter.css("background-color","#111");
+							})
+						}
+					});
+					console.log(newsletter.val());
+					newsletter.val("");
+				}
+			});
+		});
+
+
 		/* Wave Script
 		 * Nicholas Crawford 2016
 		 * Adapted from mr doob's code : http://mrdoob.com/lab/javascript/requestanimationframe/
@@ -85,11 +119,12 @@
 
 		    	setTimeout( function(){
     				$('.btn').css('opacity', '1');
-    				$('footer').css('opacity', '1');
+					$('.txt').css('opacity', '1');
+					$('footer').css('opacity', '1');
        			},1000);
 		    	
 		    } else {
-		    	drawWave('#D21C5A', 9, 2, 0, true)//Pink
+		    	drawWave('#D21C5A', 9, 2, 0, true); //Pink
 		    	drawWave('#F7961D', 11, 4, 0.25, true);//Orange
 		    }
 		}
