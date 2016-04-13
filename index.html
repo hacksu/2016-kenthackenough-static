@@ -3,7 +3,7 @@
 	<title>Kent Hack Enough</title>
 	<link rel="stylesheet" type="text/css" href="Styles/normalize.css">
 	<link rel="stylesheet" type="text/css" href="Styles/main.css">
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 </head>
@@ -14,7 +14,7 @@
 		<h2>October 2016</h2>
 		<p><a href="mailto:staff@khe.io">staff@khe.io</a></p>
 		<a href="Sponsorship.Packet.pdf"><div class="btn">Sponsor Info</div></a>
-		<input type="email" placeholder="MAILING LIST" class="txt" id="newsletter-sign-up" spellcheck="false"/>
+		<input type="email" placeholder="MAILING LIST" id="newsletter-sign-up" spellcheck="false" />
 
 		<footer>
 		<div id="media">
@@ -64,15 +64,12 @@
 						success: function(data) {
 							newsletter.attr("placeholder", "See you soon");
 							newsletter.attr("disabled", true);
-							newsletter.css("background-color","#008000");
 							console.log("it worked")
 						},
 						error: function(data) {
-							newsletter.attr("placeholder", "Try that again?");
-							newsletter.css("background-color","#990000");
+							newsletter.attr("placeholder", "Oops. Something went wrong! Try that again?");
 							console.log("it failed");
 							newsletter.keyup(function (e) {
-								newsletter.css("background-color","#111");
 							})
 						}
 					});
@@ -119,7 +116,7 @@
 
 		    	setTimeout( function(){
     				$('.btn').css('opacity', '1');
-					$('.txt').css('opacity', '1');
+					$('input').css('opacity', '1');
 					$('footer').css('opacity', '1');
        			},1000);
 		    	
