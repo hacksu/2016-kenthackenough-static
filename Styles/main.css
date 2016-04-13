@@ -105,7 +105,7 @@ a {
 	display: block;
 	border-radius: 5px;
   	padding: 15px 45px;
-  	margin: 50px auto 0 auto;
+  	margin: 15px auto 0 auto;
   	font-size: 1.2rem;
   	line-height: 1;
   	text-transform: uppercase;
@@ -117,6 +117,43 @@ a {
   	opacity: 0;
 }
 
+.txt {
+	z-index: 100;
+	position: relative;
+	border: 3px solid #2B3F66;
+	color: #4D7ABD;
+	width: 250px;
+	border-radius: 5px;
+	padding: 15px 15px;
+	margin: 15px auto 0 auto;
+	font-size: 1.2rem;
+	line-height: 1;
+	height: 50px; // Changed from line-height
+	-webkit-transition: border-color 0.3s, color 0.3s, opacity 3s; /* Safari */
+	transition: border-color 0.3s, color 0.3s, opacity 3s;;
+
+	opacity: 0;
+}
+
+.txt:hover {
+	border-color: #D21C5A;
+	line-height: 1;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	text-align: center;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	text-align: center;
+
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	text-align: center;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	text-align: center;
+}
 
 .btn:hover {
 	color: #5AC2AE ;
