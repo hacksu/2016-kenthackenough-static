@@ -33,9 +33,14 @@ p {
   	transition: opacity 3s;
 }
 
+a {
+	position: relative;
+	display: inline-block;
+}
+
 footer {
 	position: relative;
-	margin: 30px auto;
+	margin: 20px auto;
 	width: 100%;
 	opacity: 0;
 
@@ -73,7 +78,7 @@ a {
 
 #logo {
 	width: 50%;
-	margin: 10vh auto 7vh auto;
+	margin: 8vh auto;
 	opacity: 0;
 
 	-webkit-transition: opacity 3s; /* Safari */
