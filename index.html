@@ -64,11 +64,9 @@
 						success: function(data) {
 							newsletter.attr("placeholder", "See you soon");
 							newsletter.attr("disabled", true);
-							console.log("it worked")
 						},
 						error: function(data) {
 							newsletter.attr("placeholder", "Oops. Something went wrong! Try that again?");
-							console.log("it failed");
 							newsletter.keyup(function (e) {
 							})
 						}
