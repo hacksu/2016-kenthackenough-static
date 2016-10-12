@@ -107,6 +107,9 @@ h1 {
 #sun {
 	position: absolute;
 
+	min-width: 300px;
+	min-height: 300px;
+
 	transform: translate(-50%, -75%);
 
 	border-radius: 100%;
@@ -115,7 +118,7 @@ h1 {
 
 	animation-name: sun-animation;
 	animation-delay: 300ms;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
 }
@@ -200,35 +203,48 @@ p {
 	left: 10%;
 	bottom: 3%;
 
+	display: block;
+
 	width: 15%;
 	height: auto;
 
-	z-index: 3;
+	min-width: 125px;
 
-	//opacity: 0;
+	z-index: 4;
 
-	.front {
-		z-index: 4;
+	animation-delay: 500ms;
 
-		opacity: 1.0;
-
-		animation-name: speaker-animation;
-		
-    	animation-duration: 1.5s;
-    	animation-timing-function: ease-in-out;
-    	animation-fill-mode: both;
-	}
-
-	animation-delay: 300ms;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 }
 
-@keyframes speaker-animation {
-    from {
-    	opacity: 1.0;
-    }
-    to {
-    	opacity: 0;
-    }
+
+.fadeout {
+	opacity: 1;
+	animation-name: fadeout-animation;
+}
+
+.front {
+	opacity: 1;
+	z-index: 3;
+}
+
+@-webkit-keyframes fadeout-animation {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes fadeout-animation{
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes fadeout-animation{
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fadeout-animation {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 /*  Mobile */
