@@ -1,0 +1,286 @@
+$lightBlue: #4D7ABD;
+$darkBlue: #2B3F66;
+$teal: #5AC2AE;
+$orange: #F7961D; 
+$pink: #D21C5A;
+$black: #111;
+$peach: #FC6C41;
+$maroon: #51082B;
+
+html {
+	height: 100%;
+	background-color: $black;
+	font-family: 'Abel', sans-serif;
+}
+
+body {
+	height: 100%;
+
+	overflow: hidden;
+
+	animation-name: sky-animation;
+	animation-delay: 300ms;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+
+    text-align: right;
+    padding: 2% 8%;
+}
+
+#logo {
+	width: 25vw;
+	height: auto;
+	min-width: 200px;
+
+	animation-delay: 2s;
+
+	filter: brightness(0) invert(1);
+
+	z-index: 3;
+}
+
+h1 {
+	margin: 7% 0;
+	font-family: 'Oswald', sans-serif;
+	font-size: 64px;
+	font-weight: lighter;
+	line-height: 1.25;
+	color: white;
+	text-transform: uppercase;
+	animation-delay: 2.25s;
+
+	z-index: 3;
+}
+
+.fade {
+	animation-name: fade-animation;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+
+.orange {
+	color: $orange;
+}
+
+@keyframes fade-animation {
+    from {
+    	opacity: 0;
+    	transform: translateY(25%);
+    }
+    to {
+    	opacity: 1;
+    	transform: translateY(0%);
+    }
+}
+
+
+@keyframes sky-animation {
+    from {
+    	background-color: $maroon;
+    }
+    to {
+    	background-color: $darkBlue;
+    }
+}
+
+@keyframes sun-animation {
+    from {
+    	background-color: $peach;
+    	top: 100%;
+    	left: 50%;
+
+    	width: 50vw;
+    	height: 50vw;
+    }
+    to {
+    	background-color: $orange;
+    	top: 10%;
+    	left: 5%;
+
+    	width: 40vw;
+    	height: 40vw;
+    }
+}
+
+#sun {
+	position: absolute;
+
+	min-width: 300px;
+	min-height: 300px;
+
+	transform: translate(-50%, -75%);
+
+	border-radius: 100%;
+
+	z-index: 1;
+
+	animation-name: sun-animation;
+	animation-delay: 300ms;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+#ground {
+	position: absolute;
+	bottom: -15%;
+	left: 0;
+	right: 0;
+
+	width: 100vw;
+	height: 30vh;
+
+	background-color: $black;
+
+	z-index: 2;
+}
+
+.content {
+	position: absolute;
+	right: 0;
+	left: 0;
+	top:0;
+	bottom: 0;
+	z-index: 5;
+
+	padding: 2% 8%;
+
+	text-align: right;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	z-index: 100;
+	position: relative;
+	border: 3px solid white;
+	color: white;
+	width: 150px;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 15px 45px;
+	margin-left: 10%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-size: 1.2rem;
+	line-height: 1;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: hand;
+	-webkit-transition: border-color 0.3s, color 0.3s, opacity 3s; /* Safari */
+	transition: border-color 0.3s, color 0.3s, opacity 3s;;
+
+	animation-delay: 2.5s;
+
+	&:hover {
+		color: darken(white, 20%);
+		border-color: darken(white, 20%);
+	}
+}
+
+p {
+	position: absolute;
+	bottom: 4%;
+	left: 0;
+	right: 0;
+	margin-right: 8%;
+	margin-left: 8%;
+	animation-delay: 2.75s;
+	line-height: 1.5;
+	color: white;
+	font-family: 'Abel', sans-serif;
+	font-size: 16pt;
+
+	z-index: 3;
+}
+
+.speaker {
+	position: absolute;
+	left: 10%;
+	bottom: 3%;
+
+	display: block;
+
+	width: 15%;
+	height: auto;
+
+	min-width: 125px;
+
+	z-index: 4;
+
+	animation-delay: 500ms;
+
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+}
+
+
+.fadeout {
+	opacity: 1;
+	animation-name: fadeout-animation;
+}
+
+.front {
+	opacity: 1;
+	z-index: 3;
+}
+
+@-webkit-keyframes fadeout-animation {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes fadeout-animation{
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@-o-keyframes fadeout-animation{
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes fadeout-animation {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/*  Mobile */
+@media (max-width: 400px) {
+
+}
+
+@media (max-width: 550px) {
+	body {
+		overflow-y: scroll;
+	}
+
+	p {
+		position: relative;
+		margin-right: 0;
+		margin-left: 0;
+		bottom: 0;
+	}
+}
+
+@media (max-width: 750px) {
+
+}
+
+@media (max-width: 1000px) {
+	h1 {
+		margin: 7% 0;
+	}
+
+		p {
+		bottom: 1%;
+	}
+}
+
+@media (max-width: 1200px) {
+	h1 {
+		margin: 4% 0;
+	}
+}
