@@ -1,0 +1,65 @@
+$lightBlue: #4D7ABD;
+$darkBlue: #2B3F66;
+$teal: #5AC2AE;
+$orange: #F7961D; 
+$pink: #D21C5A;
+$black: #111;
+$peach: #FC6C41;
+$maroon: #51082B;
+
+html {
+	height: 100%;
+	background-color: $black;
+	font-family: 'Abel', sans-serif;
+}
+
+body {
+	background-color: #2B3F66;
+}
+
+.btn {
+	z-index: 100;
+	position: relative;
+	border: 3px solid #2B3F66;
+	color: #4D7ABD;
+	width: 150px;
+	display: block;
+	border-radius: 5px;
+	padding: 15px 45px;
+	margin: 15px auto 0 auto;
+	font-size: 1.2rem;
+	line-height: 1;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: hand;
+	-webkit-transition: border-color 0.3s, color 0.3s, opacity 3s; /* Safari */
+	transition: border-color 0.3s, color 0.3s, opacity 3s;;
+
+	opacity: 0;
+
+	&:hover {
+		color: #5AC2AE ;
+		border-color: #D21C5A;
+	}
+}
+
+/*  Mobile */
+@media (min-width: 400px) {
+
+}
+
+@media (min-width: 550px) {
+
+}
+
+@media (min-width: 750px) {
+
+}
+
+@media (min-width: 1000px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
